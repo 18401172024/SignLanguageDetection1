@@ -1,0 +1,172 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "60073f2f-dc22-4c89-bf67-9c1d2474fdd7",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "the string is:  akash\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "kas\n"
+     ]
+    }
+   ],
+   "source": [
+    "#question no. 1\n",
+    "# taking string from user\n",
+    "name=str(input(\"the string is: \"))\n",
+    "#giving condition \n",
+    "if(len(name)%2==0):\n",
+    "    if name[-1]==\".\":\n",
+    "        name=name[:-1]\n",
+    "    else:\n",
+    "        name += \".\"\n",
+    "\n",
+    "word=name\n",
+    "middle_index=len(word)//2\n",
+    "substring=word[middle_index-1: middle_index +2]\n",
+    "print(substring)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "25824b67-ebc8-4a98-981f-cc03e9cd9059",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      " ram\n",
+      " abram\n",
+      " kabraman\n",
+      " askanramansak\n",
+      " askdaskanramansakpper\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "not magical\n"
+     ]
+    }
+   ],
+   "source": [
+    "# question no. 2\n",
+    "#taking five words from user\n",
+    "word1=input()\n",
+    "word2=input()\n",
+    "word3=input()\n",
+    "word4=input()\n",
+    "word5=input()\n",
+    "#giving condition for getting magical word\n",
+    "if word1 in word2 and word2 in word3 and word3 in word4 and word4 in word5:\n",
+    "    print(\"magical world\")\n",
+    "else:\n",
+    "    print(\"not magical\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "76364438-efda-4856-a8cc-337c143ec398",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "sharing of coin is invalid\n"
+     ]
+    }
+   ],
+   "source": [
+    "def sharing_of_number(n, a, b, c):  #defining function where n is no. of coins \n",
+    "# giving condition\n",
+    "# if anyone get zero then sharing is invalid \n",
+    "    if a==0 or b==0 or c==0:\n",
+    "        return False\n",
+    "# if any two out of the three person getting equal no.of coins \n",
+    "    if a==b or b==c or c==a:\n",
+    "        return False\n",
+    "# if any coin is remains after sharing\n",
+    "    if n-(a+b+c)==0:\n",
+    "        return False\n",
+    "    else:\n",
+    "        return True\n",
+    "if sharing_of_number(5,1,2,2): #taking no. of coins and sharing coins\n",
+    "    print(\"sharing of coin is valid\")\n",
+    "else:\n",
+    "    print(\"sharing of coin is invalid\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "id": "788f8cef-cfc7-41f1-8399-ae289c35212d",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      " hello hello this is python language\n",
+      " hello\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "yes\n",
+      "2\n"
+     ]
+    }
+   ],
+   "source": [
+    "# question no. 4\n",
+    "line1=input()  #taking first line\n",
+    "line2=input()   #taking word\n",
+    "if line2 in line1:  #giving condition\n",
+    "    print(\"yes\")\n",
+    "else:\n",
+    "    print(\"no\")\n",
+    "\n",
+    "print(line1.count(line2)) #for counting the no. of times of word in line"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.12.4"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}

@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 6
+names: ['Hello', 'I Love You', 'No', 'Please', 'Thanks', 'Yes']
+
+roboflow:
+  workspace: shikha-tiwari-vrwzs
+  project: yolov5-demo-pqk13
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/shikha-tiwari-vrwzs/yolov5-demo-pqk13/dataset/2
